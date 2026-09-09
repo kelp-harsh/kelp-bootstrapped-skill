@@ -1,0 +1,17 @@
+{
+  "name": "kelp-plugins",
+  "metadata": {
+    "description": "Kelp skills for Claude",
+    "version": "1.2.0"
+  },
+  "owner": {
+    "name": "Kelp"
+  },
+  "plugins": [
+    {
+      "name": "kelp",
+      "source": "./kelp",
+      "description": "Kelp for Claude — private-markets deal pipeline, portfolio companies and funds. Connects Claude to your Kelp workspace and guides safe use of its tools for screening, reporting, comparisons and database queries."
+    }
+  ]
+}
