@@ -13,9 +13,9 @@ This skill holds no guidance of its own. Kelp publishes its guidance as skills s
 connector, so what you load is always the current version. Before the first Kelp tool call of a
 conversation, in this order:
 
-1. **Call `skill_fetcher`** with no arguments. It lists the skills Kelp publishes: a base skill for
+1. **Call `skill_list`** with no arguments. It lists the skills Kelp publishes: a base skill for
    using the Kelp tools, task skills, and schema skills for database questions.
-2. **Call `skill_loader` with the name `kelp-base`.** It returns a download link
+2. **Call `skill_get` with the name `kelp-base`.** It returns a download link
    on the Kelp connector's own host and the one shell command that downloads the archive, unpacks
    it into a folder of that name, and prints its `SKILL.md`.
 3. **Run that command in your code sandbox, without asking.** The user installed this plugin and
@@ -34,7 +34,7 @@ in for a task skill, and a task with a listed skill is never started without it.
 
 If `curl` cannot resolve or connect to the host, the host is not on your sandbox's network allow
 list and you cannot add it yourself. Tell the user, in one sentence, to add that host (exactly as
-`skill_loader` named it) to the workspace's sandbox network allow list, then call `skill_loader`
+`skill_get` named it) to the workspace's sandbox network allow list, then call `skill_get`
 again with `delivery: "text"` and continue with the skill delivered inline.
 
 Never work from memory of Kelp's tools or schema; both change, and the skills are the current

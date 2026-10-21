@@ -2,7 +2,7 @@
   "mcpServers": {
     "kelp": {
       "type": "http",
-      "url": "https://alpha9.kelpglobal.co.in/api/mcp"
+      "url": "https://epsilon22.kelpglobal.co.in/api/mcp"
     }
   }
 }
