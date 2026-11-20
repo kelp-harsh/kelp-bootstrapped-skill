@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "kelp": {
+    "Kelp-alpha": {
       "type": "http",
       "url": "https://alpha9.kelpglobal.co.in/api/mcp"
     }
