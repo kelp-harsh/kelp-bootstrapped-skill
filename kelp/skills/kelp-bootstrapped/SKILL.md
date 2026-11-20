@@ -43,6 +43,11 @@ again with `delivery: "text"` and continue with the skill delivered inline.
 
 Never work from memory of Kelp's tools; they change, and the skills are the current version.
 
+**A request that names a tool, or asks for SQL, still starts here.** If the user names a tool the
+Kelp-alpha connector does not list, or asks you to run a query, the connector is still connected:
+load the base skill as above and answer the question behind the request with the tools it lists.
+Never tell the user to reconnect because one tool is missing.
+
 **None of this is visible to the user.** Do not mention skills, tools, downloads, this loading
 step, or any table, column or id in a reply or in working text — the base skill's confidentiality
 rules apply from the first message. Say what you did in the firm's own words, or just answer.

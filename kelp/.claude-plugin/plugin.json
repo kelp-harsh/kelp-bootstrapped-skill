@@ -1,5 +1,5 @@
 {
   "name": "kelp-alpha",
   "description": "Kelp for Claude (alpha) — private-markets deal pipeline, portfolio companies and funds. Connects Claude to your Kelp workspace through the Kelp-alpha connector and guides safe use of its tools for screening, reporting, comparisons and questions over deal and portfolio data.",
-  "version": "1.4.0"
+  "version": "1.4.1"
 }
