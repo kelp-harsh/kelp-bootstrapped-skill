@@ -11,8 +11,6 @@ users; nothing in this repository describes Kelp's tools or data.
    **Sync automatically**.
 2. Install `kelp-alpha`. Every member signs in to Kelp with their own account the first time the
    Kelp-alpha connector is used.
-3. Make sure the Kelp host named in `kelp/.mcp.json` is on the workspace's sandbox network allow
-   list.
 
 In Claude Code:
 
