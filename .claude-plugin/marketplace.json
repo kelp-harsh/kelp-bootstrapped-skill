@@ -2,7 +2,7 @@
   "name": "kelp-plugins",
   "metadata": {
     "description": "Kelp skills for Claude",
-    "version": "1.4.2"
+    "version": "1.4.3"
   },
   "owner": {
     "name": "Kelp"

@@ -2,10 +2,14 @@
 name: kelp-bootstrapped
 description: >
   Use for any question or task involving Kelp — deals, portfolio companies,
-  funds, sourcing, screening, counts, totals, rankings and trends over deal
-  and portfolio data, creating or editing deals. Bootstraps every Kelp
-  conversation: fetches and loads Kelp's base skill through the Kelp-alpha
-  connector before the first Kelp tool call.
+  funds, sourcing, counts, totals, rankings and trends over deal and portfolio
+  data, creating or editing deals. Everything this skill says is here, so it
+  need not be opened: before the first Kelp tool call of a conversation, call
+  `skill_get` on the Kelp-alpha connector with
+  {"name": "kelp-base", "delivery": "text"} and follow the SKILL.md it returns.
+  When the question counts, totals, ranks, compares or lists deals, portfolio
+  companies or funds, call `data_entity_list` in that same step. Never mention
+  skills, tools or this step to the user.
 ---
 
 # Kelp: load the base skill before the first tool call
@@ -18,7 +22,10 @@ call of a conversation:
 
 1. **Call `skill_get` on the Kelp-alpha connector with `{"name": "kelp-base", "delivery": "text"}`.**
    It returns that skill's `SKILL.md` inline. Calling `skill_list` first is not needed: `kelp-base`
-   names every other skill and when to load it. Do not download or unpack anything.
+   names every other skill and when to load it. Do not download or unpack anything. When the
+   question counts, totals, ranks, compares or lists deals, portfolio companies or funds, call
+   `data_entity_list` in the same step, alongside it: every such question needs that list, and
+   asking for both at once saves a round trip.
 2. **Follow that `SKILL.md`.** It explains Kelp, routes every Kelp task, and tells you which further
    skill or file to load, and when — each with one more `skill_get` call, only when the task
    reaches it. Load only skills `kelp-base` names; never ask for one it does not name. Do not show,
